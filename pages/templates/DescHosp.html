@@ -1,0 +1,67 @@
+<style>
+    p{
+         color: white;
+     }
+     #id_ciudad{
+         width: 350px;
+         height: 30px;
+         margin-left: 35px;
+     }
+     #id_beneficios{
+         width: 350px;
+         height: 30px;
+         margin-left: 10px;
+     }
+     #id_escala{
+         width: 350px;
+         height: 30px;
+         margin-left: 40px;
+     }
+     #id_presio{
+         width: 350px;
+         height: 30px;
+         margin-left: 45px;
+     }
+     #id_img{
+         width: 350px;
+         height: 30px;
+         margin-left: 50px;
+     }
+     #btn_guardar{
+         color:green;
+         width: 150px;
+         height: 40px;
+     }
+     #tit{
+         color: white;
+         font-family: Arial, Helvetica, sans-serif;
+         margin-bottom: 30px;
+     }
+     #conte_vuelo{
+         text-align: center;
+     }
+ 
+ </style>
+
+{% extends 'base.html' %}
+{% load static %}
+<!--descripcion de un Hospedaje   -->
+<ul id="lista_1">
+    <h1> Descripcion del viaje</h1>
+    
+    {% block content %}
+    
+        <div id="img_div">
+            <img src =/{{Listado_viajes_des.img}} > 
+        </div>
+         <!--descripcion de un modelo de hospedaje   -->
+    <div id="datos_div">
+        <div>Nombre del Autor:{{Listado_viajes_des.ciudad}}</div>
+        <div>Nacionalidad del Autor:{{Listado_viajes_des.descrpicion}}</div>
+        <div>Fecha de muerte del Autor:{{Listado_viajes_des.presio}}</div>
+        <div>Bibliografia del Autor:{{Listado_viajes_des.noches}}</div>
+     
+    </div>
+    
+    {% endblock content %}
+</ul>  

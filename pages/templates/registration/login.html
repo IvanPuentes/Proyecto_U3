@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<style>
+	
+</style>
+<!--formulario del ingreso al login-->
+
+    {% block content %}
+        <h2 id="titulo">Log In</h2>
+    <div style="background-color: rgba(141, 141, 141, 0.226); text-align: center;margin-top: 20px;padding-top: 20px;">
+		<form action="" method="POST">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary" id="botonsusecc">Login</button>
+            <a type="button" class="btn btn-warning" href="{% url 'registrar'%}">Registrar</a>
+           <div id="div_rec">
+            <a  href="{% url 'password_reset' %}"><br>Olvidaste tu contraseña????</a>
+			
+           </div>
+        </form>
+	</div>
+    {% endblock content%}
+
+<br><br><br><br><br><br>
+
+
+
+
+</body>
+</html>
+
+

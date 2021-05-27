@@ -1,0 +1,103 @@
+<style>
+    #id_username{
+        width: 250px;
+        margin-left: 13px;
+    }
+    #id_edad{
+        width: 250px;
+        margin-left: 50px;
+    }
+    #id_telefono{
+        width: 250px;
+        margin-left: 25px;
+    }
+    #id_email{
+        width: 250px;
+        margin-left: 50px;
+    }
+    #id_genero{
+        width: 250px;
+        margin-left: 35px;
+    }
+    #id_password1{
+        width: 250px;
+        margin-left: 20px;
+       
+    }
+    #id_password2{
+        width: 250px;
+       
+    }
+    
+    .helptext{
+        color: white;
+    }
+    ul{
+        color: white;
+    }
+    #form_reg{
+        margin-left: 500px;
+        background-color: rgba(153, 150, 150, 0.178);
+        width: 450px;
+    }
+    #btn_guardar_reg{
+        margin-left: 140px;
+        width: 150px;
+    }
+
+
+</style>
+
+<!--una de las partes que corregi fue el uso de elementos por separado de los 
+    formularios en el modelo de resgistro de usario ya que de esta forma se ve mas estetico para el usario-->
+{% extends 'base.html' %}
+<div id="cont">
+    {% block content %}
+    <h2 id="titulo">Registrar</h2>
+    <form id="form_reg" action="" method="post">{% csrf_token %}
+        
+        <div>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </div>
+
+        <div>
+            <td>{{ form.edad.label_tag }}</td>
+            <td>{{ form.edad }}</td>
+        </div>
+
+        <div>
+            <td>{{ form.telefono.label_tag }}</td>
+            <td>{{ form.telefono }}</td>
+        </div>
+
+        <div>
+            <td>{{ form.email.label_tag }}</td>
+            <td>{{ form.email }}</td>
+        </div>
+
+        
+
+        <div>
+            <td>{{ form.genero.label_tag }}</td>
+            <td>{{ form.genero }}</td>
+            
+        </div>
+
+        <div>
+            <td>{{ form.password1.label_tag }}</td>
+            <td>{{ form.password1 }}</td>
+        </div>
+
+        <div>
+            <td>{{ form.password2.label_tag }}</td>
+            <td>{{ form.password2 }}</td>
+        </div>
+
+
+        <button type="submit" id="btn_guardar_reg" class="btn btn-success">Guardar</button>
+        <br><br><br><br>
+    </form>
+</div>
+
+{% endblock content%}
